@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TodoApp</title>
+        <meta charset="utf-8">
+        <link href="styles/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    </head>
+    <body id="home">
+        
+        <nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#home">TodoApp</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Detail</a>
+                    <a class="nav-item nav-link" href="#">Graph</a>
+    
+                </div>
+            </div>
+        </nav>
+        <section id="search">
+            <div class="container-fluid py-3">
+                <div class="row">
+                    <form class="p-1 search-form" id="searchTodo">
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-auto mt-2">                         
+                                <input type="text" class="form-control mb-2 ml-1" id="inlineFormInput" placeholder="Search text">
+                            </div>
+                            
+                            <!-- <div class="col-auto ml-2">
+                                
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>Important</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div> -->
+                            <div class="col-auto mt-2">
+                                <button type="submit" class="btn btn-outline-primary mb-2">Search</button>
+                            </div>
+                        </div>
+                    </form>           
+                </div>
+            </div>
+        </section>
+
+        <search id="main" class="main-content">
+            <div class="container-fluid  bg-light">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6 col-md-12" id="defaultContent1">
+                        <h3 class="underline">Create Todo</h3>
+                        <form class="pt-2" id="new-todo">
+                            <div class="mb-3">
+                                <label>Title</label>
+                                <input type="text" class="form-control" id="titleText">
+                            </div>
+                            <div class="mb-3">
+                                <label>Detail</label>
+                                <textarea class="form-control" id="bodyText"></textarea>
+                            </div>
+                            <button class="btn btn-outline-primary" id="create">Submit</button>
+                            <div class="mb-3">
+                            </div>               
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-md-12" id="defaultContent2">
+                        <h3 class="underline">History</h3>
+                            <div id="todosHistory">
+
+
+                            </div>
+                    </div>
+                    <div class="display-switch" id="toggle-display">
+                        <h3 class="underline">Search Result</h3>
+                        <div id="search-result-todos">
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+            </div>
+        </search>
+
+
+
+        <script src="scripts/uuidv4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+        <script src="scripts/functions.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
